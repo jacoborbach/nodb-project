@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import { Component } from 'react';
+import AvailableShows from './Components/AvailableShows';
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      watchedShows: [],
+      availableShows: []
+    }
+  }
+
+  componentDidMount = () => {
+    this.getAvailableShows()
+  }
+
+  getAvailableShows = () => {
+    axios.get('/api/available-shows')
+      .then(res => this.setState({
+        availableShows: res.data
+      }))
+      .catch(err => console.log(err))
+  }
+
+
+  watch = () => {
+
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <AvailableShows availableShows={this.state.availableShows} />
+      </div>
+    );
+  }
 }
 
 export default App;

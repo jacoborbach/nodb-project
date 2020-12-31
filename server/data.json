@@ -1,0 +1,62 @@
+[
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BM2EwMmRhMmUtMzBmMS00ZDQ3LTg4OGEtNjlkODk3ZTMxMmJlXkEyXkFqcGdeQXVyMjM5ODk1NDU@._V1_UY1200_CR90,0,630,1200_AL_.jpg",
+        "name": "Queens Gambit"
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg",
+        "name": "Game of Thrones"
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        "name": "Breaking Bad"
+    },
+    {
+        "img": "https://www.coverwhiz.com/uploads/tv/Prison-Break-Season-5.jpg",
+        "name": "Prison Break"
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_.jpg",
+        "name": "Rick and Morty"
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BOGE2YWUzMDItNTg2Ny00NTUzLTlmZGYtNWMyNzVjMjQ3MThkXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+        "name": "South Park"
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BNzhlY2E5NDUtYjJjYy00ODg3LWFkZWQtYTVmMzU4ZWZmOWJkXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+        "name": "Lost"
+    },
+    {
+        "img": "https://upload.wikimedia.org/wikipedia/en/3/37/True_Detective_season_1.pngv",
+        "name": "True Detective"
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BOTU3ZTI5ZGEtYjhiMy00ODU4LTgyM2UtNDhlYjBhMjc4MjIwXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_UY1200_CR93,0,630,1200_AL_.jpg",
+        "name": "CSI: Miami"
+    },
+    {
+        "img": "https://upload.wikimedia.org/wikipedia/en/4/4c/Fauda.jpg",
+        "name": "Fauda"
+    },
+    {
+        "img": "https://upload.wikimedia.org/wikipedia/en/7/7a/ST3LambertPoster.png",
+        "name": "Stranger Things"
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BMzY2M2E1MGMtMjA4MS00ODcwLWEwNDctNTAwOWQ2MTYwZmFkXkEyXkFqcGdeQXVyMTk4NDUxNzY@._V1_.jpg",
+        "name": "Medici"
+    },
+    {
+        "img": "https://upload.wikimedia.org/wikipedia/en/2/28/Westworld_season_1.png",
+        "name": "Westworld"
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg",
+        "name": "The Mandalorian"
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BNGEyOGJiNWEtMTgwMi00ODU4LTlkMjItZWI4NjFmMzgxZGY2XkEyXkFqcGdeQXVyNjcyNjcyMzQ@._V1_.jpg",
+        "name": "The Boys"
+    }
+]
