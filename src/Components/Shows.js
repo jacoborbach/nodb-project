@@ -11,6 +11,7 @@ export class Shows extends Component {
     handleWatch = () => {
         const { show, watchFn } = this.props
         let watchedShow = {
+            id: show.id,
             img: show.img,
             name: show.name
         }
