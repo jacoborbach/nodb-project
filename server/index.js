@@ -5,6 +5,9 @@ const express = require('express'),
 
 app.use(express.json());
 
-app.get('/api/available-shows', ctrl.getavailableShows)
+app.get('/api/available-shows', ctrl.getavailableShows);
+// app.get('/api/watched-shows', ctrl.getWatchedShows);
+app.post('/api/available-shows', ctrl.addwatchedShow)
+
 
 app.listen(port, () => console.log(`Your port is running on ${port}`))

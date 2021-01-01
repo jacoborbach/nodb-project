@@ -6,12 +6,12 @@ export class AvailableShows extends Component {
         const mappedShows = this.props.availableShows.map((show, i) => {
             return (
                 <div>
-                    <Shows show={show} key={i} />
+                    <Shows show={show} key={i} watchFn={this.props.watchFn} />
                 </div>
             )
         })
         return (
-            <div>
+            <div className="availableShows">
                 {mappedShows}
             </div>
         )

@@ -1,5 +1,7 @@
 import { Component } from 'react';
+import Header from './Components/Header';
 import AvailableShows from './Components/AvailableShows';
+import WatchedShows from './Components/WatchedShows';
 import axios from 'axios';
 import './App.css';
 
@@ -13,10 +15,6 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    this.getAvailableShows()
-  }
-
-  getAvailableShows = () => {
     axios.get('/api/available-shows')
       .then(res => this.setState({
         availableShows: res.data
@@ -24,15 +22,31 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  // getWatchedShows = () => {
+  //   axios.get('/api/watched-shows')
+  //     .then(res => this.setState({
+  //       watchedShows: res.data
+  //     }))
+  //     .catch(err => console.log(err))
+  // }
 
-  watch = () => {
-
+  watch = (show) => {
+    axios.post('/api/available-shows', { show: show })
+      .then(res => this.setState({
+        watchedShows: res.data
+      }))
+      .catch(err => console.log(err))
   }
 
   render() {
     return (
       <div className="App">
-        <AvailableShows availableShows={this.state.availableShows} />
+        <Header />
+        <div className="mainFlex">
+          <AvailableShows availableShows={this.state.availableShows} watchFn={this.watch} />
+          <WatchedShows />
+        </div>
+
       </div>
     );
   }

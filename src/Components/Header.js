@@ -1,8 +1,8 @@
 const Header = () => {
     return (
-        <div>
-
-        </div>
+        <header className='header'>
+            Shows to Watch
+        </header>
     )
 }
 
