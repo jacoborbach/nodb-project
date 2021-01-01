@@ -1,8 +1,15 @@
-const WatchedShows = () => {
+import Watched from './Watched';
+
+const WatchedShows = (props) => {
+    console.log(props)
     return (
         <div>
-            <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"></img>
-            <h4>Placeholder Text</h4>
+            <h2>Watched Shows</h2>
+            {/* <img src={props.watchedShows.img} alt={props.watchedShows.img}></img>
+            <h4>{props.watchedShows.name}</h4> */}
+            {props.watchedShows.map((watchedShow, i) => {
+                return <Watched watchedShow={watchedShow} key={i} />
+            })}
         </div>
     )
 }

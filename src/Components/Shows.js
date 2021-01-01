@@ -9,10 +9,10 @@ export class Shows extends Component {
     }
 
     handleWatch = () => {
-        const { show, watchFn } = this.props;
+        const { show, watchFn } = this.props
         let watchedShow = {
-            name: show.name,
-            img: show.img
+            img: show.img,
+            name: show.name
         }
 
         watchFn(watchedShow)

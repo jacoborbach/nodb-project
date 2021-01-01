@@ -12,8 +12,8 @@ module.exports = {
     // },
     addwatchedShow: (req, res) => {
         const { show } = req.body;
-        show.id = id;
-        id++;
+        // show.id = id;
+        // id++;
 
         watchedShows.push(show);
         res.status(200).send(watchedShows);

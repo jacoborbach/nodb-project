@@ -39,12 +39,13 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.watchedShows)
     return (
       <div className="App">
         <Header />
         <div className="mainFlex">
           <AvailableShows availableShows={this.state.availableShows} watchFn={this.watch} />
-          <WatchedShows />
+          <WatchedShows watchedShows={this.state.watchedShows} />
         </div>
 
       </div>
