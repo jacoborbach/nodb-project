@@ -22,17 +22,8 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
-  // getWatchedShows = () => {
-  //   axios.get('/api/watched-shows')
-  //     .then(res => this.setState({
-  //       watchedShows: res.data
-  //     }))
-  //     .catch(err => console.log(err))
-  // }
-
   watch = (show) => {
     axios.post('/api/available-shows', { show: show })
-      //if the show is in watchedshows already then alert you have already watched this show please watch something else to diversify your thought process!
       .then(res => this.setState({
         watchedShows: res.data
       }))
@@ -42,9 +33,7 @@ class App extends Component {
   deleteWatchedShow = (id) => {
     axios.delete(`/api/available-shows/${id}`)
       .then(res => {
-        this.setState({
-          watchedShows: res.data
-        })
+        this.setState({ watchedShows: res.data })
       })
       .catch(err => console.log(err))
   }

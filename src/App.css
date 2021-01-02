@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #444444;
 }
 
 /* .App-header {
@@ -21,10 +22,18 @@
 
 .header {
   font-weight: 700;
-  font-size:xx-large
+  font-size:xx-large;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .mainFlex {
   display: flex;
-
+  width: 80%;
 }
+
+/* .watchedShows {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+} */
