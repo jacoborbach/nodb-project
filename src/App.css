@@ -1,23 +1,7 @@
 .App {
   text-align: center;
   background-color: #444444;
-}
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-.availableShows {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  
 }
 
 .header {
@@ -25,6 +9,7 @@
   font-size:xx-large;
   color: white;
   margin-bottom: 10px;
+  font-family: 'Lobster', cursive;
 }
 
 .mainFlex {
@@ -32,8 +17,9 @@
   width: 80%;
 }
 
-/* .watchedShows {
+.availableShows {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-} */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
