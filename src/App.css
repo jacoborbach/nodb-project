@@ -1,25 +1,39 @@
+/* There are some inline stylings on Shows.js and Watched.js */
+
 .App {
   text-align: center;
   background-color: #444444;
-  
+  color: white;
 }
 
 .header {
   font-weight: 700;
   font-size:xx-large;
-  color: white;
   margin-bottom: 10px;
   font-family: 'Lobster', cursive;
 }
 
 .mainFlex {
   display: flex;
-  width: 80%;
+  justify-content: space-between;
 }
 
-.availableShows {
+/* child one */
+/* .availableShows {
+  flex-grow: 3;
+} */
+
+/* .availableShows {
+  flex-grow: 1;
+} */
+
+/* .availableShows {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-left: 20px;
 }
+
+.showProps {
+  margin: 0px 20px;
+} */

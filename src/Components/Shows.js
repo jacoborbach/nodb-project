@@ -22,9 +22,10 @@ export class Shows extends Component {
     render() {
         //console.log(this.props)
         return (
-            <div onClick={this.handleWatch}>
+            <div onClick={this.handleWatch} className="showProps">
+                <h4 style={{ marginBottom: 5, fontSize: 14 }}>{this.props.show.name}</h4>
                 <img src={this.props.show.img} alt={this.props.show.img} style={{ width: 200, height: 250 }}></img>
-                <h4 style={{ marginBottom: 5 }}>{this.props.show.name}</h4>
+
                 {/* <button>Watch Show</button> */}
             </div>
         )
