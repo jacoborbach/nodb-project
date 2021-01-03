@@ -44,8 +44,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="mainFlex">
-          <AvailableShows availableShows={this.state.availableShows} watchFn={this.watch} className="availableShows" />
-          <WatchedShows watchedShows={this.state.watchedShows} deleteFn={this.deleteWatchedShow} className="watchedShows" />
+          <AvailableShows availableShows={this.state.availableShows} watchFn={this.watch} />
+          <WatchedShows watchedShows={this.state.watchedShows} deleteFn={this.deleteWatchedShow} />
         </div>
 
       </div>

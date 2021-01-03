@@ -1,9 +1,12 @@
 /* There are some inline stylings on Shows.js and Watched.js */
 
+
+/* Next maybe create it so that on hover it will create a "card" effect */
 .App {
   text-align: center;
   background-color: #444444;
   color: white;
+  text-decoration: underline;
 }
 
 .header {
@@ -15,25 +18,23 @@
 
 .mainFlex {
   display: flex;
-  justify-content: space-between;
 }
 
-/* child one */
-/* .availableShows {
-  flex-grow: 3;
-} */
-
-/* .availableShows {
-  flex-grow: 1;
-} */
-
-/* .availableShows {
+.availableShows {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-left: 20px;
+  width: 80%;
 }
 
-.showProps {
+.watchedShows {
+  width: 40%;
+  border: 5px dotted rgb(16, 68, 16)
+}
+
+/* .showProps {
   margin: 0px 20px;
-} */
+}  */
+
+
