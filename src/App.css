@@ -6,7 +6,6 @@
   text-align: center;
   background-color: #444444;
   color: white;
-  text-decoration: underline;
 }
 
 .header {
@@ -14,6 +13,7 @@
   font-size:xx-large;
   margin-bottom: 10px;
   font-family: 'Lobster', cursive;
+  text-decoration: underline;
 }
 
 .mainFlex {

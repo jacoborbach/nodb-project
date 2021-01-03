@@ -10,16 +10,7 @@ class App extends Component {
     super();
     this.state = {
       watchedShows: [],
-      availableShows: []
     }
-  }
-
-  componentDidMount = () => {
-    axios.get('/api/available-shows')
-      .then(res => this.setState({
-        availableShows: res.data
-      }))
-      .catch(err => console.log(err))
   }
 
   watch = (show) => {
@@ -30,7 +21,7 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
-  deleteWatchedShow = (id) => {
+  delete = (id) => {
     axios.delete(`/api/available-shows/${id}`)
       .then(res => {
         this.setState({ watchedShows: res.data })
@@ -44,8 +35,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="mainFlex">
-          <AvailableShows availableShows={this.state.availableShows} watchFn={this.watch} />
-          <WatchedShows watchedShows={this.state.watchedShows} deleteFn={this.deleteWatchedShow} />
+          <AvailableShows watchFn={this.watch} />
+          <WatchedShows watchedShows={this.state.watchedShows} deleteFn={this.delete} />
         </div>
 
       </div>

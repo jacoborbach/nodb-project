@@ -1,6 +1,6 @@
 let data = require('../data.json'),
     watchedShows = [];
-//const id = 1;
+// id = 1;
 
 
 module.exports = {
@@ -9,6 +9,8 @@ module.exports = {
     },
     addwatchedShow: (req, res) => {
         const { show } = req.body;
+        // show.idd = id;
+        // id++;
         watchedShows.push(show);
         res.status(200).send(watchedShows);
     },
