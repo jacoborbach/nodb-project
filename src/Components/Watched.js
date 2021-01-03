@@ -23,10 +23,10 @@ class Watched extends Component {
     }
 
     render() {
-        let { watchedShow, editFn, deleteFn } = this.props;
+        let { watchedShow, deleteFn } = this.props;
         return (
             <div>
-                <img src={watchedShow.img} alt={watchedShow.img}></img>
+                <img src={watchedShow.img} alt={watchedShow.name}></img>
                 {this.state.isEditing
                     ? (
                         <div>
