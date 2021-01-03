@@ -21,6 +21,15 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  edit = (id, newName) => {
+    let body = { name: newName };
+    axios.put(`/api/available-shows/${id}`, body)
+      .then(res => {
+        this.setState({ watchedShows: res.data });
+      })
+      .catch(err => console.log(err));
+  }
+
   delete = (id) => {
     axios.delete(`/api/available-shows/${id}`)
       .then(res => {
@@ -31,12 +40,13 @@ class App extends Component {
 
   render() {
     //console.log(this.state.watchedShows)
+    let { watchedShows } = this.state;
     return (
       <div className="App">
         <Header />
         <div className="mainFlex">
           <AvailableShows watchFn={this.watch} />
-          <WatchedShows watchedShows={this.state.watchedShows} deleteFn={this.delete} />
+          <WatchedShows watchedShows={watchedShows} editFn={this.edit} deleteFn={this.delete} />
         </div>
 
       </div>

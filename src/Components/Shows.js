@@ -24,7 +24,7 @@ export class Shows extends Component {
         return (
             <div onClick={this.handleWatch} className="showProps">
                 <h4 style={{ marginBottom: 5, fontSize: 14 }}>{this.props.show.name}</h4>
-                <img src={this.props.show.img} alt={this.props.show.img} style={{ width: 200, height: 250 }}></img>
+                <img src={this.props.show.img} alt={this.props.show.img}></img>
 
                 {/* <button>Watch Show</button> */}
             </div>

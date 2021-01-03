@@ -1,11 +1,51 @@
-const Watched = (props) => {
-    //console.log(props)
-    return (
-        <div onClick={() => props.deleteFn(props.watchedShow.id)}>
-            <img src={props.watchedShow.img} alt={props.watchedShow.img} style={{ width: 200, height: 250 }}></img>
-            <h4>{props.watchedShow.name}</h4>
-        </div>
-    )
+import { Component } from "react";
+
+class Watched extends Component {
+    constructor() {
+        super();
+        this.state = {
+            nameInput: '',
+            isEditing: false
+        }
+    }
+
+    handleChange = (val) => {
+        this.setState({ nameInput: val })
+    }
+
+    toggleView = () => {
+        this.setState({ isEditing: !this.state.isEditing })
+    }
+
+    handleEdit = (id) => {
+        this.props.editFn(id, this.state.nameInput);
+        this.toggleView();
+    }
+
+    render() {
+        let { watchedShow, editFn, deleteFn } = this.props;
+        return (
+            <div>
+                <img src={watchedShow.img} alt={watchedShow.img}></img>
+                {this.state.isEditing
+                    ? (
+                        <div>
+                            <input
+                                value={this.state.nameInput}
+                                onChange={(e) => this.handleChange(e.target.value)} />
+                            <button onClick={() => this.handleEdit(watchedShow.id)}>Submit</button>
+                        </div>
+                    )
+                    : (
+                        <div>
+                            <h4>{watchedShow.name}</h4>
+                            <button onClick={this.toggleView}>Edit Name</button>
+                        </div>
+                    )}
+                <button onClick={() => deleteFn(watchedShow.id)}>Release</button>
+            </div>
+        )
+    }
 }
 
 export default Watched;
