@@ -9,7 +9,7 @@ export class Search extends Component {
     }
 
     handleClick = () => {
-        //this.get()
+        this.props.searchFn(this.state.inputVal)
     }
 
     handleChange = (val) => {
@@ -17,11 +17,12 @@ export class Search extends Component {
     }
 
     render() {
-        console.log(this.state.inputVal)
+        //console.log(this.state.inputVal)
+        //console.log(this.props)
         return (
             <div className="search">
                 <input value={this.state.inputVal} placeholder="Search Here" onChange={(e) => this.handleChange(e.target.value)}></input>
-                <button>Search</button>
+                <button onClick={this.handleClick}>Search</button>
             </div>
         )
     }

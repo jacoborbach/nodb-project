@@ -23,8 +23,6 @@ export class AvailableShows extends Component {
             .catch(err => console.log(err))
     }
 
-    // get('/api/utelly-data/inputVal')
-
     render() {
         //console.log(this.state.availableShows)
         let { availableShows } = this.state;

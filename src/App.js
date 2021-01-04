@@ -11,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       watchedShows: [],
+      searchResults: []
     }
   }
 
@@ -39,13 +40,22 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  getSearchResults = (inputVal) => {
+    axios.get(`/api/utelly-data/${inputVal}`)
+      .then(res => {
+        this.setState({ searchResults: res.data })
+        console.log(res.data)
+      })
+      .catch(err => console.log(err))
+  }
+
   render() {
     //console.log(this.state.watchedShows)
     let { watchedShows } = this.state;
     return (
       <div className="App">
         <Header />
-        <Search />
+        <Search searchFn={this.getSearchResults} />
         <div className="mainFlex">
           <AvailableShows watchFn={this.watch} />
           <WatchedShows watchedShows={watchedShows} editFn={this.edit} deleteFn={this.delete} />
