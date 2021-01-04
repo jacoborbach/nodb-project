@@ -6,7 +6,8 @@ export class AvailableShows extends Component {
     constructor() {
         super();
         this.state = {
-            availableShows: []
+            availableShows: [],
+            inputVal: ''
         }
     }
 
@@ -22,12 +23,15 @@ export class AvailableShows extends Component {
             .catch(err => console.log(err))
     }
 
+    // get('/api/utelly-data/inputVal')
+
     render() {
+        //console.log(this.state.availableShows)
         let { availableShows } = this.state;
-        const mappedShows = availableShows.map(show => {
+        const mappedShows = availableShows.map(element => {
             return (
                 <div>
-                    <Shows show={show} key={show.id} watchFn={this.props.watchFn} />
+                    <Shows show={element} key={element.id} watchFn={this.props.watchFn} />
                 </div>
             )
         })

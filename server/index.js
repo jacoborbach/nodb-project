@@ -1,7 +1,8 @@
 const express = require('express'),
     ctrl = require('./controllers/ShowsCtrl'),
     port = 3002,
-    app = express();
+    app = express(),
+    utellyctrl = require('./controllers/UtellyCtrl')
 
 app.use(express.json());
 
@@ -12,3 +13,7 @@ app.delete('/api/available-shows/:id', ctrl.deleteWatchedShow);
 
 
 app.listen(port, () => console.log(`Your port is running on ${port}`))
+
+
+//To search from external api
+app.get('/api/utelly-data/:name', utellyctrl.getData)

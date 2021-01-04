@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Header from './Components/Header';
 import AvailableShows from './Components/AvailableShows';
 import WatchedShows from './Components/WatchedShows';
+import Search from './Components/Search';
 import axios from 'axios';
 import './App.css';
 
@@ -44,6 +45,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Search />
         <div className="mainFlex">
           <AvailableShows watchFn={this.watch} />
           <WatchedShows watchedShows={watchedShows} editFn={this.edit} deleteFn={this.delete} />
