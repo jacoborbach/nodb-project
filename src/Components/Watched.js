@@ -4,13 +4,13 @@ class Watched extends Component {
     constructor() {
         super();
         this.state = {
-            nameInput: '',
+            inputVal: '',
             isEditing: false
         }
     }
 
     handleChange = (val) => {
-        this.setState({ nameInput: val })
+        this.setState({ inputVal: val })
     }
 
     toggleView = () => {
@@ -18,35 +18,39 @@ class Watched extends Component {
     }
 
     handleEdit = (id) => {
-        this.props.editFn(id, this.state.nameInput);
+        let { editFn } = this.props,
+            { inputVal } = this.state;
+
+        editFn(id, inputVal);
         this.toggleView();
     }
 
+
     render() {
         let { watchedShow, deleteFn } = this.props;
-        console.log(this.props)
+        //console.log(this.props)
         return (
             <div className="watched">
                 <img src={watchedShow.img} alt={watchedShow.name}></img>
                 {this.state.isEditing
                     ? (
                         <div>
+                            <h4>{watchedShow.name}</h4>
                             <input
-                                value={this.state.nameInput}
+                                value={this.state.inputVal}
                                 onChange={(e) => this.handleChange(e.target.value)} />
                             <button onClick={() => this.handleEdit(watchedShow.id)}>Submit</button>
-                            <button onClick={() => deleteFn(watchedShow.id)}>Remove</button>
+                            <button onClick={() => deleteFn(watchedShow.id)}>Remove Title</button>
                         </div>
                     )
                     : (
                         <div>
                             <h4>{watchedShow.name}</h4>
                             <h4>Rating: {watchedShow.rating}</h4>
-                            <button onClick={this.toggleView}>Edit Title</button>
-                            <button onClick={() => deleteFn(watchedShow.id)}>Remove</button>
+                            <button onClick={this.toggleView}>Edit Rating</button>
+                            <button onClick={() => deleteFn(watchedShow.id)}>Remove Title</button>
                         </div>
                     )}
-
             </div>
         )
     }

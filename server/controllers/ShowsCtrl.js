@@ -16,10 +16,11 @@ module.exports = {
     },
     editWatchedShow: (req, res) => {
         const { id } = req.params,
-            { name } = req.body;
+            { rating } = req.body;
 
         const show = watchedShows.find(element => element.id === +id)
-        show.name = name;
+        show.rating = rating;
+        // console.log(show.rating)
         res.status(200).send(watchedShows);
     },
     deleteWatchedShow: (req, res) => {

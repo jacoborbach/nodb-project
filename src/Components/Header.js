@@ -9,9 +9,9 @@ export class Header extends Component {
         //console.log(this.props)
         return (
             <header className='header'>
-                <div>Cinema</div>
+                <div onClick={this.handleClick}>Cinema</div>
                 <div></div>
-                <div onClick={this.handleClick}>Home</div>
+                <div></div>
             </header>
         )
     }

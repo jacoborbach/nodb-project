@@ -36,8 +36,8 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
-  edit = (id, newName) => {
-    let body = { name: newName };
+  edit = (id, newRating) => {
+    let body = { rating: newRating };
     axios.put(`/api/available-shows/${id}`, body)
       .then(res => {
         this.setState({ watchedShows: res.data });

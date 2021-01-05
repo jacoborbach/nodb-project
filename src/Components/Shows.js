@@ -33,11 +33,12 @@ export class Shows extends Component {
             <div className="show">
                 <h4 style={{ marginBottom: 5, fontSize: 14 }}>{show.name}</h4>
                 <img src={show.img} alt={show.img}></img>
-                <input type='number' min='1' max='5' onChange={(e) => this.handleChange(e)} placeholder="Rate this show" value={this.state.inputVal}></input>
-                <button onClick={this.handleWatch}>Watch Show</button>
-                {/* <form>
+                <form>
+                    <label>Rate:</label>
+                    <input type='number' min='1' max='5' onChange={(e) => this.handleChange(e)} placeholder="1-5" value={this.state.inputVal}></input>
+                </form>
 
-                </form> */}
+                <button onClick={this.handleWatch}>Watch Show</button>
 
             </div>
         )
