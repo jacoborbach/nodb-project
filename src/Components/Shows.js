@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
 export class Shows extends Component {
-    constructor() {
-        super();
-        this.state = {
-            placeholder: 'hello'
-        }
-    }
 
     handleWatch = () => {
         const { show, watchFn } = this.props

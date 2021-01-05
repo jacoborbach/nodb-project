@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import searchResults, { SearchResults } from './SearchResults';
 import Shows from './Shows';
 
 class AvailableShows extends Component {
@@ -13,11 +14,10 @@ class AvailableShows extends Component {
             searchResults.map(element => {
                 return (
                     <div className="resultsFlex">
-                        {element.map(el => {
+                        {element.map((el, i) => {
                             return (
                                 <div >
-                                    <h4>{el.name}</h4>
-                                    <img src={el.picture} alt={el.picture} style={{ height: 200, width: 300 }}></img>
+                                    <SearchResults result={el} key={i} watchFn={this.props.watchFn} />
                                 </div>
                             )
                         })}
