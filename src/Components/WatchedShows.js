@@ -5,8 +5,8 @@ const WatchedShows = (props) => {
     return (
         <div className="watchedShows">
             <h2>Watched Shows</h2>
-            {props.watchedShows.map((watchedShow, i) => {
-                return <Watched watchedShow={watchedShow} key={i} editFn={props.editFn} deleteFn={props.deleteFn} />
+            {props.watchedShows.map(watchedShow => {
+                return <Watched watchedShow={watchedShow} key={watchedShow.id} editFn={props.editFn} deleteFn={props.deleteFn} />
             })}
         </div>
     )

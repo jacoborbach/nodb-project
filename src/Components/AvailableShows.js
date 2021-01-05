@@ -16,8 +16,8 @@ class AvailableShows extends Component {
                     <div className="resultsFlex">
                         {element.map((el, i) => {
                             return (
-                                <div >
-                                    <SearchResults result={el} key={i} watchFn={this.props.watchFn} />
+                                <div key={i}>
+                                    <SearchResults result={el} watchFn={this.props.watchFn} />
                                 </div>
                             )
                         })}
@@ -28,10 +28,10 @@ class AvailableShows extends Component {
             })
         )
             : (
-                availableShows.map((element, i) => {
+                availableShows.map(element => {
                     return (
-                        <div>
-                            <Shows show={element} key={i} watchFn={this.props.watchFn} />
+                        <div key={element.id}>
+                            <Shows show={element} watchFn={this.props.watchFn} />
                             {/* <div>{console.log('2')}</div> */}
                         </div>
                     )
