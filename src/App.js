@@ -61,12 +61,17 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  clearSearchResults = () => {
+    let emptyArray = []
+    this.setState({ searchResults: emptyArray })
+  }
+
   render() {
-    //console.log(this.state.searchResults)
+    console.log(this.state.availableShows)
     let { watchedShows, availableShows, searchResults } = this.state;
     return (
       <div className="App">
-        <Header />
+        <Header clearFn={this.clearSearchResults} />
         <Search searchFn={this.getSearchResults} />
 
         <div className="mainFlex">

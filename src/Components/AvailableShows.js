@@ -21,7 +21,7 @@ class AvailableShows extends Component {
                                 </div>
                             )
                         })}
-                        {/* <div>{console.log('1')}</div> */}
+                        <div>{console.log('1')}</div>
                     </div >
 
                 )

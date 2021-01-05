@@ -15,7 +15,7 @@ export class SearchResults extends Component {
 
     render() {
         // let { result } = this.props;
-        console.log(this.props)
+        //console.log(this.props)
         let mappedResults = this.props.result.locations.map((element, i) => {
             return (
                 <div>

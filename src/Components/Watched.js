@@ -34,15 +34,17 @@ class Watched extends Component {
                                 value={this.state.nameInput}
                                 onChange={(e) => this.handleChange(e.target.value)} />
                             <button onClick={() => this.handleEdit(watchedShow.id)}>Submit</button>
+                            <button onClick={() => deleteFn(watchedShow.id)}>Remove</button>
                         </div>
                     )
                     : (
                         <div>
                             <h4>{watchedShow.name}</h4>
-                            <button onClick={this.toggleView}>Edit Name</button>
+                            <button onClick={this.toggleView}>Edit Title</button>
+                            <button onClick={() => deleteFn(watchedShow.id)}>Remove</button>
                         </div>
                     )}
-                <button onClick={() => deleteFn(watchedShow.id)}>Remove</button>
+
             </div>
         )
     }
