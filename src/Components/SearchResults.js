@@ -15,7 +15,7 @@ export class SearchResults extends Component {
 
     render() {
         // let { result } = this.props;
-        console.log(this.props)
+        //console.log(this.props)
         return (
             <div>
                 <h4>{this.props.result.name}</h4>

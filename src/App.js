@@ -62,12 +62,13 @@ class App extends Component {
   }
 
   render() {
-    //console.log(this.state.watchedShows)
+    console.log(this.state.searchResults)
     let { watchedShows, availableShows, searchResults } = this.state;
     return (
       <div className="App">
         <Header />
         <Search searchFn={this.getSearchResults} />
+
         <div className="mainFlex">
           <AvailableShows availableShows={availableShows} watchFn={this.watch} searchResults={searchResults} />
           <WatchedShows watchedShows={watchedShows} editFn={this.edit} deleteFn={this.delete} />

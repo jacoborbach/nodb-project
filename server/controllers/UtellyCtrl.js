@@ -17,6 +17,7 @@ module.exports = {
         //console.log(res.data)
 
         let response = await axios.request(options)
+        dataArray = [];
         dataArray.push(response.data.results);
         //console.log(dataArray)
         res.status(200).send(dataArray);

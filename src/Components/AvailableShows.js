@@ -5,7 +5,7 @@ import Shows from './Shows';
 class AvailableShows extends Component {
 
     render() {
-        console.log(this.props)
+        //console.log(this.props)
         let { availableShows, searchResults } = this.props;
         //console.log(searchResults);
         //console.log(availableShows);
@@ -21,7 +21,7 @@ class AvailableShows extends Component {
                                 </div>
                             )
                         })}
-                        <div>{console.log('1')}</div>
+                        {/* <div>{console.log('1')}</div> */}
                     </div >
 
                 )
@@ -32,7 +32,7 @@ class AvailableShows extends Component {
                     return (
                         <div>
                             <Shows show={element} key={element.id} watchFn={this.props.watchFn} />
-                            <div>{console.log('2')}</div>
+                            {/* <div>{console.log('2')}</div> */}
                         </div>
                     )
                 })
