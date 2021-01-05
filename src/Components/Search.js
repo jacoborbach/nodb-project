@@ -17,13 +17,19 @@ export class Search extends Component {
         this.setState({ inputVal: val })
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     render() {
         //console.log(this.state.inputVal)
         //console.log(this.props)
         return (
             <div className="search">
-                <input value={this.state.inputVal} placeholder="Search Here" onChange={(e) => this.handleChange(e.target.value)}></input>
-                <button onClick={(e) => this.handleClick(e)}>Search</button>
+                <form onSubmit={this.handleSubmit}>
+                    <input value={this.state.inputVal} placeholder="Search Here" onChange={(e) => this.handleChange(e.target.value)}></input>
+                    <button onClick={(e) => this.handleClick(e)}>Search</button>
+                </form>
             </div>
         )
     }
