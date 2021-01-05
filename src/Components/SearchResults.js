@@ -19,7 +19,7 @@ export class SearchResults extends Component {
         let mappedResults = this.props.result.locations.map((element, i) => {
             return (
                 <div>
-                    <a href={element.url} target="_blank">
+                    <a href={element.url} target="_blank" rel="noreferrer">
                         <img src={element.icon} alt={element.icon} style={{ height: 50, width: 50, backgroundColor: 'white', margin: 4 }} ></img>
                     </a>
 

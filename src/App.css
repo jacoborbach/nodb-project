@@ -71,3 +71,7 @@ img {
   display: flex;
   flex-direction: row;
 }
+
+.watched {
+  margin-bottom: 15px;
+}
