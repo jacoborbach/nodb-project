@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import searchResults, { SearchResults } from './SearchResults';
+import SearchResults from './SearchResults';
 import Shows from './Shows';
 
 class AvailableShows extends Component {

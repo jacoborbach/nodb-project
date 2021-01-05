@@ -6,7 +6,7 @@
   text-align: center;
   background-color: #444444;
   color: white;
-  height: auto;
+  height: 200vh;
 }
 
 .header {
@@ -51,6 +51,8 @@ img {
 .show{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
 
 .search {
@@ -61,6 +63,6 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 10px;
 }

@@ -17,7 +17,7 @@ export class SearchResults extends Component {
         // let { result } = this.props;
         //console.log(this.props)
         return (
-            <div>
+            <div className="show">
                 <h4>{this.props.result.name}</h4>
                 <img src={this.props.result.picture} alt={this.props.result.picture} style={{ height: 200, width: 300 }}></img>
                 <button onClick={this.handleClick}>Watch Me</button>
