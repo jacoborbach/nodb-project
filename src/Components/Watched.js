@@ -24,6 +24,7 @@ class Watched extends Component {
 
     render() {
         let { watchedShow, deleteFn } = this.props;
+        console.log(this.props)
         return (
             <div className="watched">
                 <img src={watchedShow.img} alt={watchedShow.name}></img>
@@ -40,6 +41,7 @@ class Watched extends Component {
                     : (
                         <div>
                             <h4>{watchedShow.name}</h4>
+                            <h4>Rating: {watchedShow.rating}</h4>
                             <button onClick={this.toggleView}>Edit Title</button>
                             <button onClick={() => deleteFn(watchedShow.id)}>Remove</button>
                         </div>

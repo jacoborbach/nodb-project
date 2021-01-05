@@ -67,7 +67,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.availableShows)
+    //console.log(this.state.availableShows)
     let { watchedShows, availableShows, searchResults } = this.state;
     return (
       <div className="App">
