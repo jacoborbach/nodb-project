@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
 import Shows from './Shows';
-import axios from 'axios';
 
-export class AvailableShows extends Component {
-    constructor() {
-        super();
-        this.state = {
-            inputVal: '',
-        }
-    }
+class AvailableShows extends Component {
 
     render() {
-        //console.log(this.state.availableShows)
-        let { availableShows } = this.props;
+        console.log(this.props)
+        let { availableShows, searchResults } = this.props;
+        //console.log(searchResults);
+        //console.log(availableShows);
 
-        let mappedShows = !this.props.searchResults === [] ? (
-            this.props.searchResults.map(element => {
+        let mappedShows = searchResults.length > 0 ? (
+            searchResults.map(element => {
                 return (
                     <div>
-                        <h2>{element.name}</h2>
+                        {element.map(el => {
+                            return (
+                                <div>
+                                    <h4>{el.name}</h4>
+                                    <img src={el.picture} alt={el.picture} style={{ height: 200, width: 300 }}></img>
+                                </div>
+                            )
+                        })}
                         <div>{console.log('1')}</div>
-                    </div>
+                    </div >
 
                 )
             })
@@ -36,7 +38,6 @@ export class AvailableShows extends Component {
                 })
             )
 
-        console.log(this.props.searchResults)
         return (
             <div className="availableShows">
                 {/* conditional rendering */}
@@ -47,4 +48,4 @@ export class AvailableShows extends Component {
     }
 }
 
-export default AvailableShows
+export default AvailableShows;
