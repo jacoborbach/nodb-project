@@ -11,8 +11,21 @@ class App extends Component {
     super();
     this.state = {
       watchedShows: [],
+      availableShows: [],
       searchResults: []
     }
+  }
+
+  componentDidMount = () => {
+    this.getData();
+  }
+
+  getData = () => {
+    axios.get('/api/available-shows')
+      .then(res => this.setState({
+        availableShows: res.data
+      }))
+      .catch(err => console.log(err))
   }
 
   watch = (show) => {
@@ -43,7 +56,8 @@ class App extends Component {
   getSearchResults = (inputVal) => {
     axios.get(`/api/utelly-data/${inputVal}`)
       .then(res => {
-        this.setState({ searchResults: res.data })
+
+        this.setState({ availableShows: res.data })
         console.log(res.data)
       })
       .catch(err => console.log(err))
@@ -57,7 +71,7 @@ class App extends Component {
         <Header />
         <Search searchFn={this.getSearchResults} />
         <div className="mainFlex">
-          <AvailableShows watchFn={this.watch} />
+          <AvailableShows availableShows={this.state.availableShows} watchFn={this.watch} searchResults={this.state.searchResults} />
           <WatchedShows watchedShows={watchedShows} editFn={this.edit} deleteFn={this.delete} />
         </div>
 

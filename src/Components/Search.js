@@ -10,6 +10,7 @@ export class Search extends Component {
 
     handleClick = () => {
         this.props.searchFn(this.state.inputVal)
+        this.setState({ inputVal: '' })
     }
 
     handleChange = (val) => {

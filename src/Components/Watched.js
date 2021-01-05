@@ -42,7 +42,7 @@ class Watched extends Component {
                             <button onClick={this.toggleView}>Edit Name</button>
                         </div>
                     )}
-                <button onClick={() => deleteFn(watchedShow.id)}>Release</button>
+                <button onClick={() => deleteFn(watchedShow.id)}>Remove</button>
             </div>
         )
     }

@@ -6,37 +6,42 @@ export class AvailableShows extends Component {
     constructor() {
         super();
         this.state = {
-            availableShows: [],
-            inputVal: ''
+            inputVal: '',
         }
-    }
-
-    componentDidMount = () => {
-        this.getData();
-    }
-
-    getData = () => {
-        axios.get('/api/available-shows')
-            .then(res => this.setState({
-                availableShows: res.data
-            }))
-            .catch(err => console.log(err))
     }
 
     render() {
         //console.log(this.state.availableShows)
-        let { availableShows } = this.state;
-        const mappedShows = availableShows.map(element => {
-            return (
-                <div>
-                    <Shows show={element} key={element.id} watchFn={this.props.watchFn} />
-                </div>
+        let { availableShows } = this.props;
+
+        let mappedShows = !this.props.searchResults === [] ? (
+            this.props.searchResults.map(element => {
+                return (
+                    <div>
+                        <h2>{element.name}</h2>
+                        <div>{console.log('1')}</div>
+                    </div>
+
+                )
+            })
+        )
+            : (
+                availableShows.map(element => {
+                    return (
+                        <div>
+                            <Shows show={element} key={element.id} watchFn={this.props.watchFn} />
+                            <div>{console.log('2')}</div>
+                        </div>
+                    )
+                })
             )
-        })
-        //console.log(this.props)
+
+        console.log(this.props.searchResults)
         return (
             <div className="availableShows">
-                {mappedShows}
+                {/* conditional rendering */}
+
+                { mappedShows}
             </div>
         )
     }
