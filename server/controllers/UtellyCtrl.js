@@ -14,7 +14,7 @@ module.exports = {
             }
         };
 
-        console.log(res.data)
+        //console.log(res.data)
 
         let response = await axios.request(options)
         dataArray.push(response.data.results);

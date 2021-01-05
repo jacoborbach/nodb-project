@@ -12,10 +12,10 @@ class AvailableShows extends Component {
         let mappedShows = searchResults.length > 0 ? (
             searchResults.map(element => {
                 return (
-                    <div>
+                    <div className="resultsFlex">
                         {element.map(el => {
                             return (
-                                <div>
+                                <div >
                                     <h4>{el.name}</h4>
                                     <img src={el.picture} alt={el.picture} style={{ height: 200, width: 300 }}></img>
                                 </div>
