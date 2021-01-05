@@ -28,10 +28,10 @@ class AvailableShows extends Component {
             })
         )
             : (
-                availableShows.map(element => {
+                availableShows.map((element, i) => {
                     return (
                         <div>
-                            <Shows show={element} key={element.id} watchFn={this.props.watchFn} />
+                            <Shows show={element} key={i} watchFn={this.props.watchFn} />
                             {/* <div>{console.log('2')}</div> */}
                         </div>
                     )
