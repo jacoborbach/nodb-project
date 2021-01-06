@@ -46,7 +46,7 @@ class App extends Component {
   }
 
   delete = (id) => {
-    console.log(id)
+    //console.log(id)
     axios.delete(`/api/available-shows/${id}`)
       .then(res => {
         this.setState({ watchedShows: res.data })

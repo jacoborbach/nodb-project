@@ -47,7 +47,34 @@ class Watched extends Component {
                     : (
                         <div>
                             <h4>{watchedShow.name}</h4>
-                            <h4>Rating: {watchedShow.rating}</h4>
+                            {/* conditonally rendering colors for Rating */}
+                            {watchedShow.rating === "1" ? (
+                                <h4>Rating: <span className='red'>{watchedShow.rating}</span></h4>
+                            ) : (
+                                    null
+                                )}
+                            {watchedShow.rating === "2" ? (
+                                <h4>Rating: <span className='orange'>{watchedShow.rating}</span></h4>
+                            ) : (
+                                    null
+                                )}
+                            {watchedShow.rating === "3" ? (
+                                <h4>Rating: <span className='yellow'>{watchedShow.rating}</span></h4>
+                            ) : (
+                                    null
+                                )}
+                            {watchedShow.rating === "4" ? (
+                                <h4>Rating: <span className='lightGreen'>{watchedShow.rating}</span></h4>
+                            ) : (
+                                    null
+                                )}
+                            {watchedShow.rating === "5" ? (
+                                <h4>Rating: <span className='green'>{watchedShow.rating}</span></h4>
+                            ) : (
+                                    null
+                                )}
+
+
                             <button onClick={this.toggleView}>Edit Rating</button>
                             <button onClick={() => deleteFn(watchedShow.id)}>Remove Title</button>
                         </div>

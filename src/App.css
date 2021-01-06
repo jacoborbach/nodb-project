@@ -82,9 +82,30 @@ input[type=number]{
 
 button {
   border-radius: 4px;
+  /* border: 2px solid #e7e7e7; */
 }
 
 .watchLctns {
   display: flex;
   flex-direction: row;
+}
+
+.red {
+  color: red
+}
+
+.orange {
+  color:orange
+}
+
+.yellow {
+  color: yellow
+}
+
+.lightGreen {
+  color: rgb(28, 255, 7)
+}
+
+.green {
+  color: green
 }

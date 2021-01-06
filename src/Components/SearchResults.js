@@ -56,12 +56,12 @@ export class SearchResults extends Component {
                         <div className='watchLctns'>{mappedResults}</div>
 
                     ) : (
-                            <div><button onClick={this.handleToggle}>Watch Locations</button></div>
+                            <div><button onClick={this.handleToggle}>Locations</button></div>
 
                         )
                     }
 
-                    <button onClick={this.handleClick}>Watch Me</button>
+                    <button onClick={this.handleClick}>Watch</button>
                 </div>
             </div>
         )

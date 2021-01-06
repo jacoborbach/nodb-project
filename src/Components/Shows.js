@@ -38,7 +38,7 @@ export class Shows extends Component {
                     <input type='number' min='1' max='5' onChange={(e) => this.handleChange(e)} placeholder="1-5" value={this.state.inputVal}></input>
                 </form>
 
-                <button onClick={this.handleWatch}>Watch Show</button>
+                <button onClick={this.handleWatch}>Watch</button>
 
             </div>
         )
