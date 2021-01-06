@@ -83,3 +83,8 @@ input[type=number]{
 button {
   border-radius: 4px;
 }
+
+.watchLctns {
+  display: flex;
+  flex-direction: row;
+}

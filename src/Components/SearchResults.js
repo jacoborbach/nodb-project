@@ -4,7 +4,8 @@ export class SearchResults extends Component {
     constructor() {
         super();
         this.state = {
-            inputVal: ''
+            inputVal: '',
+            toggleView: false
         }
     }
 
@@ -22,6 +23,10 @@ export class SearchResults extends Component {
 
     handleChange = (e) => {
         this.setState({ inputVal: e.target.value })
+    }
+
+    handleToggle = () => {
+        this.setState({ toggleView: !this.state.toggleView })
     }
 
     render() {
@@ -47,7 +52,15 @@ export class SearchResults extends Component {
                 </form>
 
                 <div className="buttonFlex">
-                    {mappedResults}
+                    {this.state.toggleView ? (
+                        <div className='watchLctns'>{mappedResults}</div>
+
+                    ) : (
+                            <div><button onClick={this.handleToggle}>Watch Locations</button></div>
+
+                        )
+                    }
+
                     <button onClick={this.handleClick}>Watch Me</button>
                 </div>
             </div>
