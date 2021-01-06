@@ -69,8 +69,9 @@ class App extends Component {
   }
 
   clearWatchedShows = () => {
-    let emptyArray = []
-    this.setState({ watchedShows: emptyArray })
+    axios.get('/api/clear-watched')
+      .then(res => this.setState({ watchedShows: res.data }))
+      .catch(err => console.log(err))
   }
 
   render() {

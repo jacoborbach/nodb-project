@@ -11,6 +11,9 @@ app.post('/api/available-shows', ctrl.addwatchedShow);
 app.put('/api/available-shows/:id', ctrl.editWatchedShow);
 app.delete('/api/available-shows/:id', ctrl.deleteWatchedShow);
 
+//clear watched shows
+app.get('/api/clear-watched', ctrl.clearWatchedShow);
+
 
 app.listen(port, () => console.log(`Your port is running on ${port}`))
 
