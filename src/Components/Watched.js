@@ -37,6 +37,7 @@ class Watched extends Component {
                         <div>
                             <h4>{watchedShow.name}</h4>
                             <input
+                                type='number' min='1' max='5'
                                 value={this.state.inputVal}
                                 onChange={(e) => this.handleChange(e.target.value)} />
                             <button onClick={() => this.handleEdit(watchedShow.id)}>Submit</button>

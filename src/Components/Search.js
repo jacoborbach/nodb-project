@@ -27,7 +27,7 @@ export class Search extends Component {
         return (
             <div className="search">
                 <form onSubmit={this.handleSubmit}>
-                    <input value={this.state.inputVal} placeholder="Search Here" onChange={(e) => this.handleChange(e.target.value)}></input>
+                    <input value={this.state.inputVal} placeholder="Movies, Series, TV shows" onChange={(e) => this.handleChange(e.target.value)}></input>
                     <button onClick={(e) => this.handleClick(e)}>Search</button>
                 </form>
             </div>
