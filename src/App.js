@@ -62,9 +62,15 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+
   clearSearchResults = () => {
     let emptyArray = []
     this.setState({ searchResults: emptyArray })
+  }
+
+  clearWatchedShows = () => {
+    let emptyArray = []
+    this.setState({ watchedShows: emptyArray })
   }
 
   render() {
@@ -77,7 +83,7 @@ class App extends Component {
 
         <div className="mainFlex">
           <AvailableShows availableShows={availableShows} watchFn={this.watch} searchResults={searchResults} />
-          <WatchedShows watchedShows={watchedShows} editFn={this.edit} deleteFn={this.delete} />
+          <WatchedShows watchedShows={watchedShows} editFn={this.edit} deleteFn={this.delete} clearFn={this.clearWatchedShows} />
         </div>
 
       </div>

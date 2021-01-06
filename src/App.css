@@ -38,7 +38,8 @@
   flex-wrap: wrap;
   width:50%;
   text-align: center;
-  border: 3px inset black
+  border: 3px inset black;
+  align-items: center;
 }
 
 img {
@@ -108,4 +109,9 @@ button {
 
 .green {
   color: green
+}
+
+.clear {
+  padding: 2px 10px;
+  align-self: flex-end;
 }
